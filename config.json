@@ -1,0 +1,34 @@
+{
+  "name" : "Servidor :: Site Célula",
+  "fileOutput" : "outputCommand.txt",
+  "Executor": {
+    "path" : "/bin/sh",
+    "parameter": "-c"
+  },
+  "Tasks": [
+    {
+      "label" : "Atualiza os repositórios do sistema operacional",
+      "command" : "apt update -y"
+    },
+    {
+      "label" : "Remove todos os pacotes que não são mais necessários.",
+      "command" : "sudo apt autoremove -y"
+    },
+    {
+      "label" : "Atualiza todos os pacotes.",
+      "command" : "apt dist-upgrade -y"
+    },
+    {
+      "label" : "Criar um arquivo.",
+      "command" : "touch teste.txt"
+    },
+    {
+      "label" : "Criar um arquivo.",
+      "command" : "mkdir teste"
+    },
+    {
+      "label" : "Lista diretório.",
+      "command" : "ls -lah"
+    }
+  ]
+}
